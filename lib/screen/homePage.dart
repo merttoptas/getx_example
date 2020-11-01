@@ -8,6 +8,7 @@ class MyHomePage extends StatelessWidget {
 
   final controller = Get.put(Controller());
   final Controller ctrl = Get.find();
+  bool _darkThemeEnabled = false;
 
   @override
   Widget build(BuildContext context) {
@@ -36,13 +37,51 @@ class MyHomePage extends StatelessWidget {
             MaterialButton(
               color: Colors.blueAccent,
               onPressed: () {
-                Get.to(SecondPage(controller.count.value), transition: Transition.rightToLeftWithFade);
+                Get.to(SecondPage(controller.count.value),
+                    transition: Transition.rightToLeftWithFade);
               },
               child: Text(
                 'Go to Second Page',
                 style: TextStyle(fontSize: 25.0, color: Colors.white),
               ),
-            ) // ontroller is an instance of Get.find
+            ),
+            MaterialButton(
+              color: Colors.blueAccent,
+              onPressed: () {
+                Get.snackbar("Snackbar", "Example Message",colorText: Colors.white, backgroundColor: Colors.red);
+              },
+              child: Text(
+                'Sample Snackbar',
+                style: TextStyle(fontSize: 20.0, color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              color: Colors.blueAccent,
+              onPressed: () {
+                Get.defaultDialog(
+                    title: "Example Dialog", onConfirm: () {}, onCancel: () {});
+              },
+              child: Text(
+                'Sample Dialog',
+                style: TextStyle(fontSize: 25.0, color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              color: Colors.blueAccent,
+              onPressed: () {
+                if (_darkThemeEnabled) {
+                  Get.changeTheme(ThemeData.light());
+                  _darkThemeEnabled = false;
+                } else {
+                  Get.changeTheme(ThemeData.dark());
+                  _darkThemeEnabled = true;
+                }
+              },
+              child: Text(
+                'Dark Theme',
+                style: TextStyle(fontSize: 25.0, color: Colors.white),
+              ),
+            ),
           ],
         ),
       ),

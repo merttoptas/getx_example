@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SecondPage extends StatelessWidget {
   SecondPage(this.count);
+
   int count;
 
   @override
@@ -15,15 +17,20 @@ class SecondPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("Second Page", style: TextStyle(fontSize: 20.0),),
+            Text(
+              "Second Page",
+              style: TextStyle(fontSize: 20.0),
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(count.toString(), style: TextStyle(fontSize: 20.0),),
-            )
+              child: Text(
+                count.toString(),
+                style: TextStyle(fontSize: 20.0),
+              ),
+            ),
           ],
         ),
       ),
