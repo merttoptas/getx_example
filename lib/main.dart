@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_example/controller/HomeBinding.dart';
-import 'package:getx_example/screen/homePage.dart';
+import 'package:getx_example/screens/homePage.dart';
 
 void main() => runApp(GetMaterialApp(home: MyHomePage()));
 

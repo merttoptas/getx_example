@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_example/controller/controller.dart';
-import 'package:getx_example/screen/secondPage.dart';
+import 'package:getx_example/screens/secondPage.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key key}) : super(key: key);
 
   final controller = Get.put(Controller());
-  final Controller ctrl = Get.find();
   bool _darkThemeEnabled = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Mobiler Getx Tutorial"),
+        title: Text("Mobiler GetX Tutorial"),
         centerTitle: true,
       ),
       body: Center(
