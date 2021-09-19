@@ -1,6 +1,6 @@
 # getx_example
 
-A new Flutter application.
+A new Flutter application. You can read how to use this repo on this link: https://www.mobiler.dev/post/flutter-da-getx-kullanimi
 
 ## Getting Started
 
